@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr.Fake</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <header class="bg-dark d-flex flex-wrap justify-content-center py-3 border-bottom">
+      <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <img src="caduceo.png" alt="Caduceo" class="ms-3 me-2" width="40" height="40" />
+        <span class="fs-4">Dr.Fake</span>
+      </a>
+      <!-- <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link text-white">Mas Herramientas</a></li>
+      </ul> -->
+    </header>
+    <main class="container my-5">
+      <div class="row">
+        <div class="col">AD</div>
+        <div id="formInfo" class="col-7 p-4 border border-2 rounded">
+          <div class="">
+            <!-- <p>Ingresa tus datos</p> -->
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text">Nombre </span>
+            <input type="text" class="form-control" id="dataName" />
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text">Edad</span>
+            <input type="number" class="form-control" min="1" max="99" inputmode="numeric" id="dataAge" />
+            <span class="input-group-text">Peso</span>
+            <input type="number" class="form-control" step=".01" inputmode="numeric" id="dataWeight" />
+            <span class="input-group-text">Estatura</span>
+            <input type="number" class="form-control" min="1" max="2" step=".01" inputmode="numeric" id="dataHeight" />
+          </div>
+          <hr />
+          <div class="">
+            <!-- <p class="my-0">Ingresa los datos del consultorio</p> -->
+            <!-- <small>Ingresa una ubicacion cercana a tu domicilio.</small> -->
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text">Calle</span>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text">Numero</span>
+            <input type="text" class="form-control" />
+            <span class="input-group-text">Codigo Postal</span>
+            <input type="text" class="form-control" />
+            <span class="input-group-text">Lada Telefonica</span>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text">Colonia</span>
+            <input type="text" class="form-control" />
+            <span class="input-group-text">Ciudad</span>
+            <input type="text" class="form-control" />
+          </div>
+          <hr />
+          <div class="input-group my-2">
+            <span class="input-group-text">Fecha</span>
+            <input type="date" class="form-control" />
+            <span class="input-group-text">Dias de Ausencia</span>
+            <input type="number" class="form-control" min="0" max="15" inputmode="numeric" placeholder="0" />
+          </div>
+          <div class="input-group my-2">
+            <span class="input-group-text">Diagnostico</span>
+            <select class="form-select">
+              <!-- <option value="1">
+                  Infeccion Estomacal (Gastroenteritis viral)
+                </option> -->
+              <option value="2">
+                Anemia por deficiencia de hierro (Anemia ferropriva)
+              </option>
+              <option selected>---</option>
+            </select>
+          </div>
+          <div class="d-grid col-5 mx-auto">
+            <button class="btn btn-success" id="buttonGenerate">
+              Generar Receta
+            </button>
+          </div>
+        </div>
+        <div class="col">AD</div>
+      </div>
+    </main>
+  </div>
+  <script src="pdf.js"></script>
+</body>
+
+</html>
