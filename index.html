@@ -6,6 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr.Fake</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#9f00a7" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- ---- -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -14,88 +23,95 @@
   <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
   <script src="https://unpkg.com/downloadjs@1.4.7"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1258681310561491"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="container-fluid p-0">
-    <header class="bg-dark d-flex flex-wrap justify-content-center py-3 border-bottom">
-      <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <img src="caduceo.png" alt="Caduceo" class="ms-3 me-2" width="40" height="40" />
-        <span class="fs-4">Dr.Fake</span>
-      </a>
-      <!-- <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link text-white">Mas Herramientas</a></li>
-      </ul> -->
+    <header class="bg-dark d-flex align-items-end justify-content-center py-1 border-bottom">
+      <span>
+        <img src="favicon/favicon-32x32.png" alt="Favicon">
+      </span>
+      <h1 class="text-white my-0 mx-2">Dr.Fake</h1>
+      <small class="text-white fst-italic">by PH</small>
     </header>
-    <main class="container my-5">
-      <div class="row">
-        <div class="col">AD</div>
-        <div id="formInfo" class="col-7 p-4 border border-2 rounded">
-          <div class="">
-            <!-- <p>Ingresa tus datos</p> -->
-          </div>
-          <div class="input-group my-2">
-            <span class="input-group-text">Nombre </span>
-            <input type="text" class="form-control" id="dataName" />
-          </div>
-          <div class="input-group my-2">
-            <span class="input-group-text">Edad</span>
-            <input type="number" class="form-control" min="1" max="99" inputmode="numeric" id="dataAge" />
-            <span class="input-group-text">Peso</span>
-            <input type="number" class="form-control" step=".01" inputmode="numeric" id="dataWeight" />
-            <span class="input-group-text">Estatura</span>
-            <input type="number" class="form-control" min="1" max="2" step=".01" inputmode="numeric" id="dataHeight" />
-          </div>
-          <hr />
-          <div class="">
-            <!-- <p class="my-0">Ingresa los datos del consultorio</p> -->
-            <!-- <small>Ingresa una ubicacion cercana a tu domicilio.</small> -->
-          </div>
-          <div class="input-group my-2">
-            <span class="input-group-text">Calle</span>
-            <input type="text" class="form-control" />
-          </div>
-          <div class="input-group my-2">
-            <span class="input-group-text">Numero</span>
-            <input type="text" class="form-control" />
-            <span class="input-group-text">Codigo Postal</span>
-            <input type="text" class="form-control" />
-            <span class="input-group-text">Lada Telefonica</span>
-            <input type="text" class="form-control" />
-          </div>
-          <div class="input-group my-2">
-            <span class="input-group-text">Colonia</span>
-            <input type="text" class="form-control" />
-            <span class="input-group-text">Ciudad</span>
-            <input type="text" class="form-control" />
-          </div>
-          <hr />
-          <div class="input-group my-2">
-            <span class="input-group-text">Fecha</span>
-            <input type="date" class="form-control" />
-            <span class="input-group-text">Dias de Ausencia</span>
-            <input type="number" class="form-control" min="0" max="15" inputmode="numeric" placeholder="0" />
-          </div>
-          <div class="input-group my-2">
-            <span class="input-group-text">Diagnostico</span>
-            <select class="form-select">
-              <!-- <option value="1">
+    <!-- Main content -->
+    <main class="container p-0">
+      <!-- Form -->
+      <div id="formInfo" class="px-2 py-2 mx-0 my-2">
+        <p class="fst-normal lh-sm m-0">* Ingresa tus datos.
+        </p>
+        <div class="input-group my-1">
+          <span class="input-group-text text-bg-secondary">Nombre</span>
+          <input type="text" class="form-control" id="dataName" />
+        </div>
+        <div class="input-group my-1">
+          <span class="input-group-text text-bg-secondary">Edad</span>
+          <input type="number" class="form-control" min="1" max="99" inputmode="numeric" id="dataAge" />
+          <span class="input-group-text text-bg-secondary">Peso</span>
+          <input type="number" class="form-control" step=".01" inputmode="numeric" id="dataWeight" />
+          <span class="input-group-text fst-italic text-bg-light">kg&nbsp;</span>
+        </div>
+        <div class="input-group my-1">
+          <span class="input-group-text text-bg-secondary">Estatura</span>
+          <input type="number" class="form-control" min="1" max="2" step=".01" inputmode="numeric" id="dataHeight" />
+          <span class="input-group-text fst-italic text-bg-light">cm</span>
+        </div>
+        <hr />
+        <p class="p-1 lh-sm m-0">
+          * Estos datos se usan como referencia del consultorio, ingresa una direccion cercana a tú
+          domicilio.
+        </p>
+        <div class="input-group my-2">
+          <span class="input-group-text text-bg-secondary">Calle</span>
+          <input type="text" class="form-control" />
+          <span class="input-group-text text-bg-secondary">#</span>
+          <input type="number" class="form-control" />
+        </div>
+        <div class="input-group my-2">
+          <span class="input-group-text text-bg-secondary">CP</span>
+          <input type="number" class="form-control" />
+          <span class="input-group-text text-bg-secondary">Lada Telefonica</span>
+          <input type="number" class="form-control" />
+        </div>
+        <div class="input-group my-2">
+          <span class="input-group-text">Colonia</span>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Ciudad</span>
+          <input type="text" class="form-control" />
+        </div>
+        <hr />
+        <div class="input-group my-2">
+          <span class="input-group-text">Fecha</span>
+          <input type="date" class="form-control" />
+          <span class="input-group-text">Dias de Ausencia</span>
+          <input type="number" class="form-control" min="0" max="15" inputmode="numeric" placeholder="0" />
+        </div>
+        <div class="input-group my-2">
+          <span class="input-group-text">Diagnostico</span>
+          <select class="form-select">
+            <!-- <option value="1">
                   Infeccion Estomacal (Gastroenteritis viral)
                 </option> -->
-              <option value="2">
-                Anemia por deficiencia de hierro (Anemia ferropriva)
-              </option>
-              <option selected>---</option>
-            </select>
-          </div>
-          <div class="d-grid col-5 mx-auto">
-            <button disabled class="btn btn-success" id="buttonGenerate">
-              Generar Receta
-            </button>
-          </div>
+            <option value="2">
+              Anemia por deficiencia de hierro (Anemia ferropriva)
+            </option>
+            <option selected>---</option>
+          </select>
         </div>
-        <div class="col">AD</div>
+        <small class="fw-semibold lh-1">
+          No almacenamos tus datos personales.
+          <br>
+          <a href="#">Politica de Privacidad.</a>
+        </small>
+        <div class="d-grid col-5 mx-auto my-3">
+          <button disabled class="btn btn-success" id="buttonGenerate">
+            Generar Receta
+          </button>
+        </div>
+
       </div>
     </main>
   </div>
