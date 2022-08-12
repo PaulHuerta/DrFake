@@ -7,14 +7,13 @@ buttonAction.addEventListener("click", async function pdfMod() {
   var dataAge = document.getElementById("dataAge").value;
   var dataWeight = document.getElementById("dataWeight").value;
   var dataHeight = document.getElementById("dataHeight").value;
-  
 
-  if(dataName == " "){
-    dataName.classList.add("is-invalid")
+  if (dataName == " ") {
+    dataName.classList.add("is-invalid");
   }
 
   var dataIMC =
-    (parseFloat(dataWeight) / (parseFloat(dataHeight) * parseFloat(dataHeight)));
+    parseFloat(dataWeight) / (parseFloat(dataHeight) * parseFloat(dataHeight));
 
   const url = "demo.pdf";
   const existingPdfBytes = await fetch(url).then((res) => res.arrayBuffer());

@@ -39,72 +39,82 @@
     <main class="container p-0">
       <!-- Form -->
       <div id="formInfo" class="px-2 py-2 mx-0 my-2">
-        <p class="fst-normal lh-sm m-0">* Ingresa tus datos.
+        <p class="fst-normal fw-light lh-sm m-0">Ingresa tus datos.
         </p>
         <div class="input-group my-1">
           <span class="input-group-text text-bg-secondary">Nombre</span>
-          <input type="text" class="form-control" id="dataName" />
+          <input type="text" class="form-control" id="dataName" maxlength="50" />
         </div>
         <div class="input-group my-1">
           <span class="input-group-text text-bg-secondary">Edad</span>
-          <input type="number" class="form-control" min="1" max="99" inputmode="numeric" id="dataAge" />
+          <input type="number" class="form-control"
+            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            inputmode="numeric" id="dataAge" maxlength="2" />
           <span class="input-group-text text-bg-secondary">Peso</span>
-          <input type="number" class="form-control" step=".01" inputmode="numeric" id="dataWeight" />
+          <input type="number" class="form-control"
+            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            inputmode="numeric" id="dataWeight" maxlength="2" />
           <span class="input-group-text fst-italic text-bg-light">kg&nbsp;</span>
         </div>
         <div class="input-group my-1">
           <span class="input-group-text text-bg-secondary">Estatura</span>
-          <input type="number" class="form-control" min="1" max="2" step=".01" inputmode="numeric" id="dataHeight" />
+          <input type="number" class="form-control"
+            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="3" inputmode="numeric" id="dataHeight" />
           <span class="input-group-text fst-italic text-bg-light">cm</span>
         </div>
         <hr />
-        <p class="p-1 lh-sm m-0">
-          * Estos datos se usan como referencia del consultorio, ingresa una direccion cercana a tú
+        <p class="fst-normal lh-sm m-0 fw-light">
+          Los siguientes datos se usan como referencia del consultorio, ingresa una direccion cercana a tú
           domicilio.
         </p>
         <div class="input-group my-2">
           <span class="input-group-text text-bg-secondary">Calle</span>
           <input type="text" class="form-control" />
           <span class="input-group-text text-bg-secondary">#</span>
-          <input type="number" class="form-control" />
+          <input type="number" class="form-control"
+            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="5" inputmode="numeric" />
         </div>
         <div class="input-group my-2">
-          <span class="input-group-text text-bg-secondary">CP</span>
-          <input type="number" class="form-control" />
+          <span class="input-group-text text-bg-secondary">C.P</span>
+          <input type="number" class="form-control"
+            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="5" inputmode="numeric" />
           <span class="input-group-text text-bg-secondary">Lada Telefonica</span>
-          <input type="number" class="form-control" />
+          <input type="number" class="form-control"
+            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="3" inputmode="numeric" />
         </div>
         <div class="input-group my-2">
-          <span class="input-group-text">Colonia</span>
-          <input type="text" class="form-control" />
+          <span class="input-group-text text-bg-secondary">Colonia</span>
+          <input type="text" class="form-control" maxlength="25" />
         </div>
         <div class="input-group">
-          <span class="input-group-text">Ciudad</span>
-          <input type="text" class="form-control" />
+          <span class="input-group-text text-bg-secondary">Ciudad</span>
+          <input type="text" class="form-control" maxlength="25" />
         </div>
         <hr />
         <div class="input-group my-2">
-          <span class="input-group-text">Fecha</span>
+          <span class="input-group-text text-bg-secondary">Fecha</span>
           <input type="date" class="form-control" />
-          <span class="input-group-text">Dias de Ausencia</span>
-          <input type="number" class="form-control" min="0" max="15" inputmode="numeric" placeholder="0" />
+          <!-- <span class="input-group-text">Dias de Ausencia</span>
+          <input type="number" class="form-control" min="0" max="15" inputmode="numeric" placeholder="0" /> -->
         </div>
         <div class="input-group my-2">
-          <span class="input-group-text">Diagnostico</span>
+          <span class="input-group-text text-bg-secondary">Diagnostico</span>
           <select class="form-select">
+            <option value="1">
+              Anemia por deficiencia de hierro (Anemia ferropriva)
+            </option>
             <!-- <option value="1">
                   Infeccion Estomacal (Gastroenteritis viral)
                 </option> -->
-            <option value="2">
-              Anemia por deficiencia de hierro (Anemia ferropriva)
-            </option>
             <option selected>---</option>
           </select>
         </div>
-        <small class="fw-semibold lh-1">
-          No almacenamos tus datos personales.
-          <br>
-          <a href="#">Politica de Privacidad.</a>
+        <small class="fw-bold lh-1 text-warning">
+          * Estos datos no se almacenan.
         </small>
         <div class="d-grid col-5 mx-auto my-3">
           <button disabled class="btn btn-success" id="buttonGenerate">
@@ -115,7 +125,7 @@
       </div>
     </main>
   </div>
-  <script src="pdf.js"></script>
+  <script src="js/pdf.js"></script>
 </body>
 
 </html>
