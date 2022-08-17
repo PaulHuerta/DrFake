@@ -7,13 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr.Fake</title>
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-  <link rel="manifest" href="favicon/site.webmanifest" />
-  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
-  <meta name="msapplication-TileColor" content="#9f00a7" />
-  <meta name="theme-color" content="#ffffff" />
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#7D756C">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#7D756C">
   <!-- ---- -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
@@ -22,28 +32,29 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
   <script src="https://unpkg.com/downloadjs@1.4.7"></script>
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1258681310561491"
-    crossorigin="anonymous"></script> -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1258681310561491"
+    crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
   <div class="container-fluid p-0">
-    <header class="bg-dark d-flex align-items-end justify-content-center py-1 border-bottom">
+    <header class="text-bg-secondary d-flex align-items-end justify-content-center py-1 border-bottom">
       <span>
-        <img src="favicon/favicon-32x32.png" alt="Favicon">
+        <img src="favicon/apple-icon-60x60.png" alt="Favicon" width="50" height="50">
       </span>
       <h1 class="text-white my-0 mx-2">Dr.Fake</h1>
       <small class="text-white fst-italic">by PH</small>
     </header>
     <!-- Main content -->
-    <main class="container p-0 px-xl-5">
+    <main class="container col-xl-4 col-md-5 p-0 px-xl-5">
       <!-- Form -->
       <div id="formInfo" class="px-2 py-2 mx-0 my-2">
         <p class="fst-normal fw-light lh-sm m-0">Ingresa tus datos.
         </p>
         <div class="input-group my-1 ">
           <span class="input-group-text rounded-0 text-bg-secondary">Nombre</span>
-          <input type="text" class="form-control rounded-0 " id="dataName" maxlength="50"/>
+          <input type="text" class="form-control rounded-0 " id="dataName" maxlength="50" />
         </div>
         <div class="input-group my-1">
           <span class="input-group-text rounded-0 text-bg-secondary">Edad</span>
@@ -70,34 +81,34 @@
         </p>
         <div class="input-group my-2">
           <span class="input-group-text rounded-0 text-bg-secondary">Calle</span>
-          <input type="text" class="form-control rounded-0" id="dataAddress"/>
-          <span class="input-group-text text-bg-secondary" >#</span>
+          <input type="text" class="form-control rounded-0" id="dataAddress" />
+          <span class="input-group-text text-bg-secondary">#</span>
           <input type="number" class="form-control rounded-0"
             oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-            maxlength="5" inputmode="numeric" id="dataNumber"/>
+            maxlength="5" inputmode="numeric" id="dataNumber" />
         </div>
         <div class="input-group my-2">
           <span class="input-group-text rounded-0 text-bg-secondary">C.P</span>
           <input type="number" class="form-control rounded-0"
             oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-            maxlength="5" inputmode="numeric" id="dataCP"/>
+            maxlength="5" inputmode="numeric" id="dataCP" />
           <span class="input-group-text rounded-0 text-bg-secondary">Lada Telefonica</span>
           <input type="number" class="form-control rounded-0"
             oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-            maxlength="3" minlength="3" inputmode="numeric" id="dataLada"/>
+            maxlength="3" minlength="3" inputmode="numeric" id="dataLada" />
         </div>
         <div class="input-group my-2">
           <span class="input-group-text rounded-0 text-bg-secondary">Colonia</span>
-          <input type="text" class="form-control rounded-0" maxlength="25" id="dataCity1"/>
+          <input type="text" class="form-control rounded-0" maxlength="25" id="dataCity1" />
         </div>
         <div class="input-group">
           <span class="input-group-text rounded-0 text-bg-secondary">Ciudad</span>
-          <input type="text" class="form-control rounded-0" maxlength="25" id="dataCity2"/>
+          <input type="text" class="form-control rounded-0" maxlength="25" id="dataCity2" />
         </div>
         <hr />
         <div class="input-group my-2">
           <span class="input-group-text rounded-0 text-bg-secondary">Fecha</span>
-          <input type="date" class="form-control rounded-0" id="dataDate"/>
+          <input type="date" class="form-control rounded-0" id="dataDate" />
           <!-- <span class="input-group-text">Dias de Ausencia</span>
           <input type="number" class="form-control" min="0" max="15" inputmode="numeric" placeholder="0" /> -->
         </div>
@@ -114,7 +125,7 @@
           * Estos datos no se almacenan.
         </small>
         <div class="d-grid col-5 mx-auto my-3">
-          <button  class="btn btn-success" id="buttonGenerate">
+          <button class="btn btn-success" id="buttonGenerate">
             Generar Receta
           </button>
         </div>
