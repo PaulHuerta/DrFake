@@ -1,17 +1,6 @@
 const { degrees, PDFDocument, rgb, StandardFonts } = PDFLib;
 
-const buttonAction = document.getElementById("buttonGenerate");
-
-buttonAction.addEventListener("click", async function pdfMod() {
-  var dataName = document.getElementById("dataName").value;
-  var dataAge = document.getElementById("dataAge").value;
-  var dataWeight = document.getElementById("dataWeight").value;
-  var dataHeight = document.getElementById("dataHeight").value;
-
-  if (dataName == " ") {
-    dataName.classList.add("is-invalid");
-  }
-
+async function pdfMod() {
   var dataIMC =
     parseFloat(dataWeight) / (parseFloat(dataHeight) * parseFloat(dataHeight));
 
@@ -75,4 +64,4 @@ buttonAction.addEventListener("click", async function pdfMod() {
 
   const pdfBytes = await pdfDoc.save();
   download(pdfBytes, "RecetaF.pdf", "application/pdf");
-});
+}
